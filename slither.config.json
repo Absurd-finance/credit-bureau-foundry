@@ -1,0 +1,10 @@
+{
+  "filter_paths": "(lib/|test/)",
+  "exclude_informational": true,
+  "solc_remaps": [
+    "@prb/test/=lib/prb-test/src/",
+    "forge-std/=lib/forge-std/src/",
+    "@openzeppelin/=lib/openzeppelin-contracts/",
+    "@axelar-network/axelar-gmp-sdk-solidity/=lib/axelar-gmp-sdk-solidity/"
+  ]
+}

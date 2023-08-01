@@ -1,0 +1,12 @@
+{
+  "remappings": [
+    "@prb/test/=lib/prb-test/src/",
+    "forge-std/=lib/forge-std/src/",
+    "@openzeppelin/=lib/openzeppelin-contracts/",
+    "@axelar-network/axelar-gmp-sdk-solidity/=lib/axelar-gmp-sdk-solidity/"
+  ],
+  "optimizer": {
+    "enabled": true,
+    "runs": 200
+  }
+}
