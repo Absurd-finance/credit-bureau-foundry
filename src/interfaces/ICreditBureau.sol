@@ -2,7 +2,6 @@
 pragma solidity ^0.8.19;
 
 interface ICreditBureau {
-
     /**
      * @title Enum representing the review of a credit report.
      */
@@ -25,7 +24,7 @@ interface ICreditBureau {
     /**
      * @title Enum representing the type of credit line.
      */
-    enum CreditType {
+    enum Collateral {
         UNCOLLATERALISED,
         COLLATERALISED,
         OVERCOLLATERALISED
@@ -34,7 +33,7 @@ interface ICreditBureau {
     /**
      * @title Enum representing the duration type of a credit line (either fixed or revolving).
      */
-    enum Duration {
+    enum Type {
         FIXED,
         REVOLVING
     }
@@ -42,8 +41,8 @@ interface ICreditBureau {
     /**
      * @title Struct representing the details of a credit line.
      * @dev Contains information about the type, duration, dates, amount, token, and chain related to the credit line.
-     * @param accountType Type of the credit line, e.g., collateralized or not.
-     * @param duration Duration of the credit line, either fixed or revolving.
+     * @param collateral Collateral of the credit line, e.g., collateralized or not.
+     * @param creditType Type of the credit line, either fixed or revolving.
      * @param fromDate Start date of the credit line.
      * @param toDate End date of the credit line. Null if duration is REVOLVING.
      * @param amount Amount involved in the credit line.
@@ -51,8 +50,8 @@ interface ICreditBureau {
      * @param chain Chain ID of the blockchain where the credit line resides.
      */
     struct Credit {
-        CreditType accountType;
-        Duration duration;
+        Collateral collateral;
+        Type creditType;
         uint256 fromDate;
         uint256 toDate;
         uint256 amount;

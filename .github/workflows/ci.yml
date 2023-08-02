@@ -1,6 +1,8 @@
 name: "CI"
 
 env:
+  FORK_URL_ARBITRUM: ${{ secrets.FORK_URL_ARBITRUM }}
+  FORK_URL_OPTIMISM: ${{ secrets.FORK_URL_OPTIMISM }}
   FOUNDRY_PROFILE: "ci"
 
 on:
